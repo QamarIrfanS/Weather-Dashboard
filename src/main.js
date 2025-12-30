@@ -8,7 +8,6 @@ let isFahrenheit = false;
 
 
 localStorage.removeItem("recentCities");
-console.log("js file loaded");
 document.addEventListener("DOMContentLoaded", () =>{
 })
 
@@ -43,6 +42,8 @@ showForecast(data);
   alert(error.message);
 }
 }
+
+// User's location weather
 
 document.getElementById("currentLocationBtn").addEventListener("click", getCurrentLocation);
 
@@ -86,7 +87,7 @@ async function getWeatherByLocation(lat, lon) {
 }
 
 
-// Dropdown
+// Dropdown for recently searched cities
 
 const recentCitiesDropdown = document.getElementById("recentCitiesDropdown");
 
@@ -190,13 +191,12 @@ indiaCitiesDropdown.addEventListener("change", () => {
 })
   }
 
-
+// Today's weather
 
 function todaysWeather(data) {
 const today = data.list[0]; // closest forecast to now
 document.getElementById("heading").innerHTML = "Today's Weather In...";
 document.getElementById("cityName").textContent = data.city.name;
-// document.getElementById("temp").textContent = `Temp: ${Math.round(today.main.temp)}°C 🌡️`;
 
 currentTempCelsius = today.main.temp;
 updateTodayTemp();
@@ -209,7 +209,6 @@ updateBackground(today.weather[0].main);
 
   document.getElementById("currentWeather").classList.remove("hidden");
 
-  // const temperature = `${Math.round(today.main.temp)}`;
   const temperature = Math.round(today.main.temp);
 
 if(temperature > 40){
