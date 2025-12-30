@@ -4,9 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Weather Dashboard">
+  <meta name="keywords" content="Weather,Temp,Air,Humidity">
+  <meta name="author" content="Qamar Shaikh">
   <title>weather-dashboard</title>
-  <link rel="stylesheet" href="/src/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/src/style.css">  <!--css-->
+  <link rel="icon" type="image/png" href="images/icon.png">  <!--favicon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--search icon-->
   </head>
 
 <body class="min-h-screen flex items-center justify-center bg-cyan-100 bg-[url('./images/sunny.jpg')]">
@@ -14,6 +18,7 @@
 
 
   <div class="bg-transparent/10 backdrop-blur-lg rounded-xl p-6 w-[90%] max-w-5xl text-black shadow-xl border">
+    <!---- Heading---->
     <h1 class="text-3xl font-bold text-center text-white mb-6">Weather Dashboard</h1>
 
     <!-- -----search----- -->
@@ -52,7 +57,7 @@
         <option value="Lucknow">Lucknow</option>
       </select>
 
-
+      <!-- User's Location Weather -->
       <button id="currentLocationBtn" class="bg-white rounded p-2 flex justify-start">Check Weather in Your 
         Area</button>
     </div>
@@ -82,6 +87,7 @@
 
     <div id="forecast" class="grid grid-cols-2 md:grid-cols-5 gap-4"></div>
   </div>
+  <!-- javascript -->
   <script type="module" src="/src/main.js"></script>
 </body>
 
