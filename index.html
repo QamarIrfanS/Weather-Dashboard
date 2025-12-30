@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>weather-dashboard</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+<body class="min-h-screen flex items-center justify-center bg-cyan-100 bg-[url('./images/sunny.jpg')]">
+
+
+
+  <div class="bg-transparent/10 backdrop-blur-lg rounded-xl p-6 w-[90%] max-w-5xl text-black shadow-xl border">
+    <h1 class="text-3xl font-bold text-center text-white mb-6">Weather Dashboard</h1>
+
+    <!-- -----search----- -->
+    <div class="flex flex-col gap-5 mb-6">
+      <div class="flex flex-row gap-2 justify-around">
+        <input id="cityInput" type="text" placeholder="Search Weather by City..."
+          class="px-4 py-2 rounded-lg text-black outline-none w-[90%] placeholder-black">
+        <button id="searchBtn" class="px-2 py-2 rounded-lg bg-white w-[10%]"><i class="fa fa-search"></i></button>
+      </div>
+
+
+      <!-- Dropdown for recent cities -->
+      <select id="recentCitiesDropdown" class="text-black p-2 rounded" style="display:none">
+        <option value="" disabled selected hidden>Recently Searched</option>
+      </select>
+
+
+      <!-- dropdown -->
+
+      <select id="indiaCitiesDropdown" class="p-2 rounded text-gray">
+        <option value="">Check Weather of Given City</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Pune">Pune</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Kochi">Kochi</option>
+        <option value="Trivandrum">Thiruvananthapuram</option>
+        <option value="Indore">Indore</option>
+        <option value="Bhopal">Bhopal</option>
+        <option value="Lucknow">Lucknow</option>
+      </select>
+
+
+      <button id="currentLocationBtn" class="bg-white rounded p-2 flex justify-start">Check Weather in Your 
+        Area</button>
+    </div>
+
+
+    <!---- Current Weather----->
+
+    <div id="currentWeather" class="bg-white rounded text-center mb-6 p-5 hidden">
+      <h1 class="font-bold text-2xl" id="heading"></h1>
+      <h2 class="font-semibold" id="cityName"></h2>
+      <p class="font-semibold" id="temp"></p>
+      <div class="temp-toggle">
+        <label>
+          <input type="checkbox" id="unitToggle">
+          <span>°C / °F</span>
+        </label>
+      </div>
+
+      <p class="font-semibold" id="description"></p>
+      <p class="font-semibold" id="wind"></p>
+      <p class="font-semibold" id="humidity"></p>
+    </div>
+
+
+
+    <!---- 5 daysForecast--- -->
+
+    <div id="forecast" class="grid grid-cols-2 md:grid-cols-5 gap-4"></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
