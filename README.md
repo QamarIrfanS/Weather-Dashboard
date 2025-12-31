@@ -7,6 +7,7 @@ weather condition of their location,5 days forecast of searched weather.
 ## Features
 - Search weather by city
 - 5 Days forecast
+- Check weather of given cities from dropdown
 - Current location weather
 - Displays temperature and weather conditions
 - Responsive UI styled with Tailwind CSS
